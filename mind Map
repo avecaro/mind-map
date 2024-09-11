@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Industries Mind Map</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hizzgdev/jsmind@develop/style/jsmind.css" />
+    <script src="https://cdn.jsdelivr.net/gh/hizzgdev/jsmind@develop/js/jsmind.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hizzgdev/jsmind@develop/js/jsmind.draggable.js"></script>
+</head>
+<body>
+    <h1>Creative Industries and Job Roles</h1>
+    <div id="jsmind_container" style="width: 100%; height: 500px; border: solid 1px #ccc;"></div>
+
+    <script>
+        var mind = {
+            "meta": {
+                "name": "creative_industries_mindmap",
+                "author": "YourName",
+                "version": "1.0"
+            },
+            "format": "node_array",
+            "data": [
+                {"id": "root", "isroot": true, "topic": "Creative Industries"},
+                {"id": "film", "parentid": "root", "topic": "Film"},
+                {"id": "director", "parentid": "film", "topic": "Director"},
+                {"id": "editor", "parentid": "film", "topic": "Editor"},
+
+                {"id": "music", "parentid": "root", "topic": "Music"},
+                {"id": "composer", "parentid": "music", "topic": "Composer"},
+                {"id": "producer", "parentid": "music", "topic": "Music Producer"},
+
+                {"id": "advertising", "parentid": "root", "topic": "Advertising"},
+                {"id": "copywriter", "parentid": "advertising", "topic": "Copywriter"},
+                {"id": "artdirector", "parentid": "advertising", "topic": "Art Director"},
+
+                {"id": "publishing", "parentid": "root", "topic": "Publishing"},
+                {"id": "editor_pub", "parentid": "publishing", "topic": "Editor"},
+                {"id": "literaryagent", "parentid": "publishing", "topic": "Literary Agent"},
+
+                {"id": "design", "parentid": "root", "topic": "Design"},
+                {"id": "graphicdesigner", "parentid": "design", "topic": "Graphic Designer"},
+                {"id": "uxui", "parentid": "design", "topic": "UX/UI Designer"},
+
+                {"id": "performingarts", "parentid": "root", "topic": "Performing Arts"},
+                {"id": "actor", "parentid": "performingarts", "topic": "Actor"},
+                {"id": "choreographer", "parentid": "performingarts", "topic": "Choreographer"}
+            ]
+        };
+
+        var options = {
+            container: 'jsmind_container',
+            theme: 'primary',
+            editable: true
+        };
+        var jm = jsMind.show(options, mind);
+    </script>
+</body>
+</html>
